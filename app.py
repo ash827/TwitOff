@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     #return "Hello World!"
-    return render_template("homepage.html")
+    return render_template("request.form")
 
 @app.route("/about")
 def about():
@@ -31,3 +31,19 @@ def create_user():
     #todo: create a new user
     
     return jsonify({"message": "CREATED OK (TODO)"})
+
+# GET /hello
+# GET /hello?name=Polly
+@app.route("/hello")
+def hello(name=None):
+    print("VISITING THE HELLO PAGE")
+    print("REQUEST PARAMS:", dict(request.args))
+
+    if "name" in request.args:
+        name = request.args["name"]
+        message = f"Hello, {name}"
+    else:
+        message = "Hello World"
+
+    #return message
+    return render_template("hello.html", messsage=message)
