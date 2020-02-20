@@ -22,16 +22,6 @@ def users():
     ]
     return jsonify(users)
 
-
-
-@app.route("/users/create", methods=["POST"])
-def create_user():
-    print("CREATING A NEW USER..")
-    print("FORM DATA:", dict(request.form))
-    #todo: create a new user
-    
-    return jsonify({"message": "CREATED OK (TODO)"})
-
 # GET /hello
 # GET /hello?name=Polly
 @app.route("/hello")
@@ -47,3 +37,12 @@ def hello(name=None):
 
     #return message
     return render_template("hello.html", messsage=message)
+
+
+@app.route("/users/create", methods=["POST"])
+def create_user():
+    print("CREATING A NEW USER..")
+    print("FORM DATA:", dict(request.form))
+    #todo: create a new user
+    
+    return jsonify({"message": "CREATED OK (TODO)"})
