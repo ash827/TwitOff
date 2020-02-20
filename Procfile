@@ -1,2 +1,2 @@
-web: gunicorn "twitoff:create_app()"
+web: gunicorn "web_app:create_app()"
 stocks_service: python twitoff/stocks_service.py
