@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 
 migrate = Migrate(app,db)
 
-class USER(db.Model):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
 
