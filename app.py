@@ -23,7 +23,7 @@ class Tweet(db.Model):
 @app.route("/")
 def index():
     #return "Hello World!"
-    return render_template("request.form")
+    return render_template("homepage.html")
 
 @app.route("/about")
 def about():
