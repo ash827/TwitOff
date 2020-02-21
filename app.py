@@ -20,10 +20,10 @@ class Tweet(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
 
 #Example DB code from the docs:
-
+#
 #db.session.add(User(username="Flask", email="example@example.com"))
 #db.session.commit()
-
+#
 #users = User.query.all()
 
 
@@ -61,9 +61,6 @@ def create_user():
         return jsonify({"message": "CREATED OK", "name": name})
     else:
         return jsonify({"message": "OOPS PLEASE SPECIFY A NAME!"})
-
-    db.session.add(User(name=name))
-    db.session.commit()
 
 
 # GET /hello
