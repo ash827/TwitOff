@@ -130,3 +130,5 @@ dmypy.json
 
 #ignoring the database
 #twitoff/twitoff.db
+
+.env
