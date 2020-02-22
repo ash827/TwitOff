@@ -12,3 +12,9 @@ FLASK_APP=app.py flask db upgrade
 
 FLASK_APP=app.py flask run
 
+    #users = [
+    #    {"id":1, "name":"First User"},
+    #    {"id":2, "name":"Second User"},
+    #    {"id":3, "name":"Third User"}
+    #]
+    #return jsonify(users)
