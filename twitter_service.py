@@ -24,7 +24,19 @@ print("----------")
 
 
 
-public_tweets = client.home_timeline()
-for tweet in public_tweets:
-    print(type(tweet), tweet.text)
+#public_tweets = client.home_timeline()
 
+#for tweet in public_tweets:
+#   print(type(tweet), tweet.text)
+
+#print("---------------")
+#elon_tweet = client.user_timeline("elonmusk")
+#for tweet in elon_tweet:
+#    print(type(tweet), tweet.text)
+
+#print("-----------")
+
+elon_tweet = client.user_timeline("elonmusk", tweet_mode="extended")
+
+for tweet in elon_tweet:
+    print(type(tweet), tweet.full_text)
