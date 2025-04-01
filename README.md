@@ -1,5 +1,5 @@
 # TwitOff
-pipenv install --python 3.7
+pipenv install --python 3.9
 
 pipenv install Flask Flask-SQLAlchemy Flask-Migrate
 
